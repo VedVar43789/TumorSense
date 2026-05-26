@@ -107,6 +107,6 @@ jupyter notebook notebook/tumor_sense.ipynb
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Disclaimer ⚠️
 
 Tumor Sense is an academic project and is **not intended for clinical use**. All results are derived from a publicly available research dataset and should not be used to inform medical decisions.
