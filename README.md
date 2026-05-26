@@ -1,6 +1,7 @@
 # Tumor Sense
 
 Tumor Sense is an end-to-end SVM classification pipeline built on the Wisconsin Breast Cancer Diagnostic dataset. It reduces 30 raw cell nucleus measurements down to the 10 most predictive features and achieves high discriminatory performance providing a reliable, data-driven second opinion for ambiguous fine needle aspiration (FNA) cases.
+
 ---
 ### Why not just use tumor size?
 
@@ -8,6 +9,7 @@ Tumor Sense is an end-to-end SVM classification pipeline built on the Wisconsin 
 
 
 Tumor size alone leaves a large overlap zone where benign and malignant cases are indistinguishable. Tumor Sense uses 10 cell nucleus measurements together to resolve exactly these ambiguous cases.
+
 ---
 
 ## Results at a Glance
@@ -46,6 +48,7 @@ A false negative (calling a malignant tumor benign) is a life-threatening error.
 
 ![SHAP Plot](visuals/shap.png)
 `texture3` and `concave_points1` carry the most weight in pushing predictions toward malignant. High feature values (pink) generally shift the model toward malignant; low values (blue) toward benign.
+
 ---
 
 ## Tech Stack
