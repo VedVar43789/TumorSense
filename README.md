@@ -73,14 +73,15 @@ tumor-sense/
 ├── models/
 │   └── svm_model.pkl             # Serialized trained model
 ├── visuals/
-│   ├── shap_summary.png          # SHAP feature importance plot
-│   └── roc_curve.png             # ROC-AUC curve
+│   ├── misclass.png              # misclassification zone visualization
+│   ├── rfe_feature_rankings.png  # RFE features ranked
+│   └── shap.png                  # SHAP feature importance plot
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 # Clone the repo
