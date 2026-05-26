@@ -4,7 +4,7 @@ Tumor Sense is an end-to-end SVM classification pipeline built on the Wisconsin 
 ---
 ### Why not just use tumor size?
 
-![Misclassification Risk Zone](visuals/'Tumor Size Alone Cannot Separate All Cases'.png)
+![Misclassification Risk Zone](visuals/misclass.png)
 
 Tumor size alone leaves a large overlap zone where benign and malignant cases are indistinguishable. Tumor Sense uses 10 cell nucleus measurements together to resolve exactly these ambiguous cases.
 ---
