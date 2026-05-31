@@ -1,0 +1,48 @@
+import React from "react"
+import type { Metadata } from 'next'
+import { Instrument_Sans, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const instrumentSans = Instrument_Sans({ 
+  subsets: ["latin"],
+  variable: '--font-instrument'
+});
+
+const instrumentSerif = Instrument_Serif({ 
+  subsets: ["latin"],
+  weight: "400",
+  variable: '--font-instrument-serif'
+});
+
+const jetbrainsMono = JetBrains_Mono({ 
+  subsets: ["latin"],
+  variable: '--font-jetbrains'
+});
+
+export const metadata: Metadata = {
+  title: 'Tumor Sense — Breast Tumor Classification Model',
+  description: 'An interactive SVM-powered breast tumor classification model with research-backed visualizations and explainable predictions.',
+  generator: 'v0.app',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  // suppressHydrationWarning on <html> / <body> tolerates browser extensions
+  // (e.g. the Cursor IDE's MCP) that inject data-* attributes into the
+  // SSR-rendered HTML before React hydrates.
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        suppressHydrationWarning
+      >
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}
